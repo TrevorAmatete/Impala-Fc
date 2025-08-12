@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Impala FC Merchandise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #f70707;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .product input {
+      width: 60px;
+      padding: 5px;
+    }
+
+    .checkout-box {
+      margin-top: 40px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .checkout-box input {
+      width: 250px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .checkout-box .total {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .checkout-box button {
+      background-color: #0d1be0;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .checkout-box button:hover {
+      background-color: #000300;
+    }
+
+    .discount-note {
+      color: rgb(231, 216, 4);
+      margin-top: 10px;
+    }
+    .main-nav {
+  background-color: #f30505;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  background-color: #1000e9;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+<img src="IMAGES/Merch logo.jpg " alt="merch logo">
+  <h1>IMPALA FC MERCHANDISE</h1>
+  <p>OFFICIAL MERCHANDISE SHOP</p>
+  <nav class="main-nav">
+  <ul>
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="wazee.html">🧓 Impala Wazee</a></li>
+    <li><a href="senior.html" >⚽ Senior Team</a></li>
+    <li><a href="academy-youth.html">👶 Youth & Academy</a></li>
+    <li><a href="merchandise.html" class="active">🛍️ Merchandise</a></li>
+  </ul>
+</nav>
+</header>
+
+<div class="container">
+
+  <!-- Products List -->
+  <div class="products">
+    <div class="product">
+      <img src="images/hoodie.jpg" alt="Hoodie">
+      <h3>Hoodie</h3>
+      <p>Price: KES 2500</p>
+      <label>Qty: <input type="number" value="0" min="0" data-price="2500" class="qty"></label>
+    </div>
+
+    <div class="product">
+      <img src="images/polo.jpg" alt="Polo Shirt">
+      <h3>Polo Shirt</h3>
+      <p>Price: KES 1800</p>
+      <label>Qty: <input type="number" value="0" min="0" data-price="1800" class="qty"></label>
+    </div>
+
+    <div class="product">
+      <img src="images/mug.jpg" alt="Mug">
+      <h3>Mug</h3>
+      <p>Price: KES 700</p>
+      <label>Qty: <input type="number" value="0" min="0" data-price="700" class="qty"></label>
+    </div>
+
+    <div class="product">
+      <img src="images/keychain.jpg" alt="Keychain">
+      <h3>Keychain</h3>
+      <p>Price: KES 300</p>
+      <label>Qty: <input type="number" value="0" min="0" data-price="300" class="qty"></label>
+    </div>
+
+    <div class="product">
+      <img src="images/jersey.jpg" alt="Fan Jersey">
+      <h3>Fan Jersey</h3>
+      <p>Price: KES 2200</p>
+      <label>Qty: <input type="number" value="0" min="0" data-price="2200" class="qty"></label>
+    </div>
+  </div>
+
+  <!-- Checkout Section -->
+  <div class="checkout-box">
+    <h2>Club Member?</h2>
+    <p>Enter your Membership Card No. for a 15% discount</p>
+    <input type="text" id="memberCard" placeholder="e.g. IMP12345" oninput="applyDiscount()">
+    <p class="discount-note" id="discountNote"></p>
+
+    <p class="total">Total: KES <span id="total">0</span></p>
+    <button onclick="payWithMpesa()">Pay with M-Pesa</button>
+  </div>
+
+</div>
+
+<script>
+  const qtyInputs = document.querySelectorAll(".qty");
+  const totalDisplay = document.getElementById("total");
+  const discountNote = document.getElementById("discountNote");
+  let discount = 0;
+
+  qtyInputs.forEach(input => input.addEventListener('input', updateTotal));
+
+  function applyDiscount() {
+    const card = document.getElementById("memberCard").value.trim();
+    if (/^IMP\d{4,}$/.test(card)) {
+      discount = 0.15;
+      discountNote.textContent = "Valid Member: 15% discount applied.";
+    } else {
+      discount = 0;
+      discountNote.textContent = "";
+    }
+    updateTotal();
+  }
+
+  function updateTotal() {
+    let total = 0;
+    qtyInputs.forEach(input => {
+      const qty = parseInt(input.value) || 0;
+      const price = parseInt(input.dataset.price);
+      total += qty * price;
+    });
+    if (discount > 0) {
+      total -= total * discount;
+    }
+    totalDisplay.textContent = total;
+  }
+
+  function payWithMpesa() {
+    const total = parseInt(document.getElementById("total").textContent);
+    if (total === 0) {
+      alert("Please select at least one item.");
+      return;
+    }
+    alert("M-Pesa Checkout Initiated for KES " + total + "\nThank you for supporting Impala FC!");
+    // Redirect to Daraja API or confirmation screen
+  }
+</script>
+ <form action="merchandise.php" method="POST">
+  
+</form>
+</body>
+</html>

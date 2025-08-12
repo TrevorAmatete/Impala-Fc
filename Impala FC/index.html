@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Impala FC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>.main-nav {
+  background-color: #f80404;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  background-color: #2400f3;
+}
+</style>
+
+
+<body>
+  <header>
+    <h1>IMPALA SOCCER SECTION</h1>
+    <img src="IMAGES/Team Logo.png" alt="Team Logo">
+    <nav>
+      <section class="photo-slideshow">
+  <h2>Highlights from the Pitch</h2> 
+  <section class="photo-slideshow">
+  <div class="slideshow-container" id="slideshow">
+    <img class="slide" src="images/Slide1.jpg"                                           alt="Match Action 1">
+    <img class="slide" src="images/Slide2.jpg"                                       alt="Match Action 2">
+    <img class="slide" src="images/Team Huddle1.jpg"                                alt="Match Action 3">
+    <img class="slide" src="IMAGES/Slide5.jpg"                                    alt="Match Action4">
+    <img class="slide" src="IMAGES/Slide3.jpg"                                  alt="Match Action5">
+    <img class="slide" src="IMAGES/Slide6.jpg"                                 alt="Match Action6">
+    <img class="slide" src="IMAGES/Slide7.jpg"                                 alt="Match Action7">
+    
+      <div class="slide show ">
+    <video class="slide-media" autoplay muted loop>
+      <source src="IMAGES/Game Action1.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+  <div class="slide show">
+    <video class="slide-media" autoplay muted loop>
+      <source src="IMAGES/Game Action 2.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+</div>
+</section>
+
+  <!-- Example: Inside the navigation bar -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html"class="active">🏠 Home</a></li>
+    <li><a href="wazee.html">🧓 Impala Wazee</a></li>
+    <li><a href="senior.html" >⚽ Senior Team</a></li>
+    <li><a href="academy-youth.html">👶 Youth & Academy</a></li>
+    <li><a href="merchandise.html">🛍️ Merchandise</a></li>
+  </ul>
+</nav>
+
+
+  <section class="hero">
+    <h2>Welcome to the Official Website of Impala FC</h2>
+    
+  
+</section>
+
+    <p>HOME OF PASSION,PRIDE AND FUTURE FOOTBALL LEGENDS</p>
+    <a href="senior.html" class="btn">MEET THE SENIOR TEAM</a>
+  </section>
+
+  <main>
+    <section class="philosophy">
+  <h2>Our Team Philosophy</h2>
+  <p>
+    At Impala FC, we believe in nurturing talent through discipline, teamwork, and community spirit. 
+    We strive to inspire excellence on and off the pitch — from our academy roots to our elite senior squad, 
+    and the legacy carried by our Impala Wazee. Football is more than a game — it's a way of life.
+  </p>
+</section>
+
+    <section class="vision-mission">
+      <div class="vision">
+        <h3>Our Vision</h3>
+        <p>To be a premier football club in Kenya, known for professionalism, community impact, and nurturing talent.</p>
+      </div>
+      <div class="mission">
+        <h3>Our Mission</h3>
+        <p>To develop well-rounded footballers through structured training, mentorship, and competition — from the academy to the senior team.</p>
+      </div>
+    </section>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Impala Wazee</h3>
+      <p>
+        A veteran team of former players and local legends keeping the game alive through experience, friendship and mentorship.
+        They represent the legacy and lifelong passion of Impala FC.
+      </p>
+    </div>
+    <div class="footer-column">
+      <h3>Senior Team</h3>
+      <p>
+        Our flagship squad competing at the highest levels, composed of trained professionals and rising stars 
+        from our development pipeline. The heart and pride of the club.
+      </p>
+    </div>
+    <div class="footer-column">
+      <h3>Academy & Youth Program</h3>
+      <p>
+        From Under 6 to Under 17, our Academy trains the next generation. 
+        The Youth Program offers competitive matches and transition to the senior team.
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <?php echo date("Y"); ?> Impala FC. All rights reserved.</p> 
+  </div>
+</footer>
+
+
+    
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Impala FC. All rights reserved.</p>
+      <p>Follow us: Instagram   Twitter  
+        <ul>
+         
+    <li><a href="https://www.instagram.com/_impalafc" target="_blank">_impalafc
+     
+      <ul>
+        
+    <li><a href="https://x.com/@impala_fc" target="_blank">Impala FC
+
+      <ul>
+   
+    
+  </ul>
+</nav>
+    
+  </ul>
+</nav>
+    
+  </ul>
+</nav>
+    </div>
+  </footer>
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+  }
+
+  // Initial show
+  slides[slideIndex].classList.add("active");
+  setInterval(showSlides, 4000); // Change every 4 seconds
+</script>
+
+
+</body>
+</html>
